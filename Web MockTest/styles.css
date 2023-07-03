@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+/* Static Position */
+.static-box {
+  position: static;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+/* Fixed Position */
+.fixed-box {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+/* Sticky Position */
+.sticky-box {
+  position: sticky;
+  top: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+/* Relative Position */
+.relative-box {
+  position
