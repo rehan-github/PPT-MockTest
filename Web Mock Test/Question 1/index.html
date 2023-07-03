@@ -1,0 +1,67 @@
+<!-- 
+    1. Explain all the CSS positions(static, fixed, sticky, relative, absolute) with one code example each
+    -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Positions Explained</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>CSS Positions Explained</h1>
+
+  <div class="section">
+    <h2>Static Position</h2>
+    <p>
+      The red box below has the default <code>position: static;</code> property,
+      so it remains in the normal flow of the document.
+    </p>
+    <div class="static-box">Static Position</div>
+  </div>
+
+  <div class="section">
+    <h2>Fixed Position</h2>
+    <p>
+      The blue box below is <code>position: fixed;</code>, meaning it stays fixed
+      at a specific position on the screen even when scrolling.
+    </p>
+    <div class="fixed-box">Fixed Position</div>
+  </div>
+
+  <div class="section">
+    <h2>Sticky Position</h2>
+    <p>
+      The green box below is <code>position: sticky;</code>. It acts like a
+      <code>position: relative;</code> element until it reaches a certain threshold
+      during scrolling, at which point it becomes <code>position: fixed;</code>.
+    </p>
+    <div style="height: 1000px; background-color: lightgray;">
+      Scroll down to see the Sticky Position
+      <div class="sticky-box">Sticky Position</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Relative Position</h2>
+    <p>
+      The yellow box below is <code>position: relative;</code>, which positions it
+      relative to its normal position, offset by 20px from the top and left.
+    </p>
+    <div class="relative-box">Relative Position</div>
+  </div>
+
+  <div class="section">
+    <h2>Absolute Position</h2>
+    <p>
+      The pink box below is <code>position: absolute;</code>. It is positioned relative
+      to its nearest ancestor with <code>position: relative;</code>, which is the parent
+      <code>.parent</code> div in this case. If no ancestor had a relative position,
+      it would be positioned relative to the initial containing block (usually the document body).
+    </p>
+    <div class="parent">
+      <div class="absolute-box">Absolute Position</div>
+    </div>
+  </div>
+</body>
+</html>
