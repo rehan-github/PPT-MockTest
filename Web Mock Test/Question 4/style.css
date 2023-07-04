@@ -1,0 +1,142 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --blackColor: #231c16;
+   --textColor: #241c15;
+   --textHoverColor: #148692;
+   --yellowButtonColor: #ffe01b;
+}
+
+header {
+   background-color: var(--blackColor);
+   color: white;
+   text-align: center;
+   padding: 8px 0 1px 0;
+   font-size: 0.9rem;
+   position: sticky;
+   top: 0;
+}
+header > p > span {
+   text-decoration-line: underline;
+   text-decoration-style: dotted;
+   padding-bottom: 50px;
+   text-underline-offset: 0.4em;
+}
+
+nav {
+   background-color: #ffffff;
+   display: flex;
+   justify-content: center; /* Center-align the navigation items horizontally */
+   align-items: center;
+   padding: 20px 0;
+   border-bottom: 1px solid #e5e5e5;
+}
+
+nav ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+nav ul li {
+   margin-right: 25px;
+   font-size: 16px;
+}
+
+.container {
+   padding: 40px 20px;
+   text-align: center;
+}
+
+.container h1 {
+   font-size: 2.5rem;
+   margin-bottom: 20px;
+}
+
+.container p {
+   font-size: 1rem;
+   line-height: 1.6;
+}
+
+.container h2 {
+   font-size: 1.8rem;
+   margin-bottom: 10px;
+}
+
+.container form {
+   text-align: left;
+   margin-top: 20px;
+}
+
+.form-group {
+   margin-bottom: 20px;
+}
+
+.form-group label {
+   display: block;
+   margin-bottom: 5px;
+   font-size: 1rem;
+}
+
+.form-control {
+   width: 100%;
+   padding: 10px;
+   font-size: 1rem;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+.form-control:focus {
+   outline: none;
+   border-color: var(--yellowButtonColor);
+   box-shadow: 0 0 5px var(--yellowButtonColor);
+}
+
+.btn {
+   background-color: var(--yellowButtonColor);
+   color: var(--blackColor);
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   font-size: 1rem;
+   cursor: pointer;
+   
+}
+
+.btn:hover {
+   background-color: #fdd72e;
+}
+
+footer {
+   background-color: var(--blackColor);
+   color: white;
+   padding: 30px 0;
+}
+
+footer h3 {
+   font-size: 1.5rem;
+   margin-bottom: 20px;
+}
+
+footer ul {
+   list-style-type: none;
+   padding-left: 0;
+}
+
+footer li {
+   margin-bottom: 5px;
+}
+
+footer a {
+   color: white;
+   text-decoration: none;
+}
+
+footer a:hover {
+   color: var(--yellowButtonColor);
+}
