@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #333;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+    }
+    
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .open-modal-button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 0 auto;
+      display: block;
+    }
+    
+    .content {
+      margin-bottom: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Opem Model</h1>
+    
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac ante vitae metus volutpat posuere. Nullam hendrerit vehicula ante sit amet commodo. Mauris fringilla malesuada ipsum, ac rutrum ipsum sagittis non. Donec consequat tellus sit amet fringilla semper. Sed commodo felis eget mi cursus finibus. Sed nec erat lacinia, consectetur nunc sed, porta magna. Nunc a facilisis libero. Ut id pellentesque nulla, et fringilla justo. Proin rutrum, leo id dapibus gravida, ex nisl posuere lorem, id finibus erat metus et mauris.
+      </p>
+    
+      <button class="open-modal-button">Open Modal</button>
+    
+      <p>
+        Vestibulum eu lorem sed odio fermentum tempus. Sed auctor ultrices leo ut faucibus. Sed luctus tincidunt nisl eget consectetur. Aliquam varius semper est, non lacinia neque finibus at. Nullam nec ipsum ac dolor lobortis efficitur. Phasellus rutrum felis eu nisi consequat, nec suscipit lacus pellentesque. Fusce eu semper nibh. Nam euismod mi in nisi euismod vulputate. Donec venenatis augue nec metus efficitur, vitae ultricies mi consequat. Sed blandit efficitur odio, eget commodo ipsum euismod sed. Phasellus rutrum, purus eu dictum lacinia, orci tellus feugiat justo, eget fermentum mauris ipsum id mauris.
+      </p>
+    </div>
+    
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Modal Title</h2>
+        <p>
+          This is the modal content. You can add any additional garbage text here.
+        </p>
+        <button class="close-modal-button">Close Modal</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById("myModal");
+    var btn = document.querySelector(".open-modal-button");
+    var closeBtn = document.querySelector(".close");
+    var closeBtnModal = document.querySelector(".close-modal-button");
+    
+    function openModal() {
+      modal.style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+    
+    function closeModal() {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+    
+    btn.addEventListener("click", openModal);
+    closeBtn.addEventListener("click", closeModal);
+    closeBtnModal.addEventListener("click", closeModal);
+    window.addEventListener("click", function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
